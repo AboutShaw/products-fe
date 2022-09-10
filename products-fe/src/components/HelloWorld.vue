@@ -10,6 +10,16 @@ defineProps<{
     <h3>
       Our lastest offers at your fingertips!
     </h3>
+    <div>
+      <button>All</button>
+      <button>Books</button>
+      <button>Casual</button>
+      <button>Ceramics</button>
+      <button>Electrical</button>
+      <button>Electronics</button>
+      <button>Running</button>
+      <button>Vouchers</button>
+    </div>
   </div>
 </template>
 
