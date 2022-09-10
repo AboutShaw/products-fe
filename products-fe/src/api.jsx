@@ -1,22 +1,15 @@
 import axios from "axios";
 
-const marketplaceApi = axios.create({
-    baseURL: 'https://nc-marketplace.herokuapp.com/api'
+const productsApi = axios.create({
+    baseURL: 'http://localhost:9090/api'
   });
 
 
-const getItems = (category_name) => {    
-    return marketplaceApi.get(`/items`, {params: {category_name}})
+const getProducts = () => {    
+    return productsApi.get(`/products`, {params: {order}})
         .then((response) => {
             return response.data
         })
 };
 
-const searchItems = (search) => {    
-    return marketplaceApi.get(`/items`, {params: {search}})
-        .then((response) => {
-            return response.data
-        })
-};
-
-export { getItems, searchItems,  marketplaceApi };
+export { getProducts,  marketplaceApi };
