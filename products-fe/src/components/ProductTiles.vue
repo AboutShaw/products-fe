@@ -5,6 +5,7 @@
     name: 'ProductTiles',
     props: ['name', 'description', 'priceValue', 'weight', 'department', 'type']
   }
+  
 </script>
 
 <template>

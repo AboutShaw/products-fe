@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import ProductsList from './components/ProductsList.vue'
+import HelloWorld from './components/HelloWorld.vue';
+import ProductsList from './components/ProductsList.vue';
 
 </script>
 
