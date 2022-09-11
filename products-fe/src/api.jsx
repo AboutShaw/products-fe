@@ -6,10 +6,10 @@ const productsApi = axios.create({
 
 
 const getProducts = () => {    
-    return productsApi.get(`/products`, {params: {order}})
+    return productsApi.get(`/products`, {params: {order, filter, limit}})
         .then((response) => {
             return response.data
         })
 };
 
-export { getProducts,  marketplaceApi };
+export { getProducts,  productsApi };
