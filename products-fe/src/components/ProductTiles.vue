@@ -1,22 +1,32 @@
+<template>
+  <div v-if="product">
+    <h3>{{products.name}}</h3>
+    <p>Price: £{{convertToPounds}}</p>
+    <p>{{products.description}}</p>
+    <p>Weight: {{products.weight}}g</p>
+    <p>Category: {{products.department}}: {{products.type}}</p>
+  </div>
+</template>
+
 <script>
-  const convertToPounds = (priceValue).toFixed(2);
+  import getProducts from ('../api.jsx');
+
+  const convertToPounds = (products.priceValue).toFixed(2);
 
   export default {
     name: 'ProductTiles',
-    props: ['name', 'description', 'priceValue', 'weight', 'department', 'type']
+    props: ['name', 'description', 'priceValue', 'weight', 'department', 'type'],
+    data() {
+      return {
+        product: null
+      }
+    },
+    mounted(){
+      this.products = getProducts()
+    }
   }
-  
-</script>
 
-<template>
-  <article>
-    <h3>{{name}}</h3>
-    <p>Price: £{{convertToPounds}}</p>
-    <p>{{description}}</p>
-    <p>Weight: {{weight}}g</p>
-    <p>Category: {{department}}: {{type}}</p>
-  </article>
-</template>
+</script>
 
 <style>
 

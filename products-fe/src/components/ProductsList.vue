@@ -1,12 +1,17 @@
 <script>
     export default {
-    name: "ProductsList",
-    }
+    name: "ProductsList"
+}
 
 </script>
 
 <template>
-    <div>
-        <h1>Product List</h1>
-    </div>
+    <header>
+        <div>
+            <h1>Product List</h1>
+        </div>
+    </header>
+
+    <main>
+    </main>
 </template>
